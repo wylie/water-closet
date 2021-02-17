@@ -1,26 +1,21 @@
-name: Deployment
+name: Deploy Code to Release Branch
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+
 jobs:
-  deploy:
+  build:
+    name: Push to Release Branch
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install Packages
-      run: npm install
-    - name: Build page
-      run: npm run build
-    - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        publish_dir: ./build
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Workflow dispatch event that pushes the current version to the release branch.
+      # From here the secondary production deployment workflow will trigger to build the dependencies.
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          branch: main
+          folder: .
+          clean: false
+          single-commit: true
