@@ -1,4 +1,4 @@
-name: Build and Deploy All The Things Now
+name: Build and Deploy Again
 on:
   pull_request:
     branches: [ main ]
