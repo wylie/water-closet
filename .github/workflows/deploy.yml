@@ -15,7 +15,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          branch: main
+          branch: gh-pages
           folder: .
           clean: false
           single-commit: true
