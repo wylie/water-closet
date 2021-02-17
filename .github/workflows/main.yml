@@ -1,4 +1,4 @@
-name: Build and Deploy Everything
+name: Build and Deploy All The Things
 on:
   pull_request:
     branches: [ main ]
@@ -18,5 +18,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          branch: site # The branch the action should deploy to.
+          branch: gh-pages # The branch the action should deploy to.
           folder: build # The folder the action should deploy.
