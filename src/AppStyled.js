@@ -1,6 +1,8 @@
-.App {
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
   text-align: center;
-}
+  border: 3px solid red;
 
 .App-logo {
   height: 40vmin;
@@ -36,3 +38,4 @@
     transform: rotate(360deg);
   }
 }
+`;
