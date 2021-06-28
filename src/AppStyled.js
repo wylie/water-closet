@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledDiv = styled.div`
+export const StyledDiv = styled.div`
   text-align: center;
   border: 3px solid red;
   
