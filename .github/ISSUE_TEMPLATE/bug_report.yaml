@@ -1,5 +1,7 @@
 name: Bug Report
-description: this is a silly test
+description: This is a silly test
+title: [BUG] 
+labels: bug
 body:
 - type: checkboxes
   id: cat-preferences
@@ -13,11 +15,11 @@ body:
 - type: dropdown
   id: download
   attributes:
-    label: How did you download the software?
+    label: How did you find your cat?
     options:
-      - Homebrew
-      - MacPorts
-      - apt-get
-      - Built from source
+      - Pound/Shelter
+      - Friends
+      - On the street
+      - Cats are awful
   validations:
     required: true
