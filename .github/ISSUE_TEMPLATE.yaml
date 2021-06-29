@@ -1,3 +1,5 @@
+name: Testing
+description: this is a silly test
 body:
 - type: checkboxes
   id: cat-preferences
