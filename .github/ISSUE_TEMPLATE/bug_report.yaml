@@ -1,4 +1,4 @@
-name: Testing
+name: Bug Report
 description: this is a silly test
 body:
 - type: checkboxes
