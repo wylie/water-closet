@@ -1,6 +1,5 @@
 name: Bug Report
 description: This is a silly test
-title: "[BUG] "
 labels: bug
 body:
 - type: checkboxes
